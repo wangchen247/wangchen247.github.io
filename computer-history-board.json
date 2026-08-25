@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-25 17:00（北京时间）",
+  "coverage": "Computer History · 北京时间 2026-08-25 16:00–17:00",
+  "delivery": {
+    "updatedAt": "今天 15:40",
+    "title": "新增两项技术理解任务",
+    "summary": "已把训练侧重算法和 Phoenix 产品研究转换成可执行卡片，并与现有工作一起重排前三优先。",
+    "outputs": [
+      "训练侧重算法：冻结为“可解释刺激分解模型”任务，不把 Garmin 未公开系数冒充已知。",
+      "Phoenix：冻结为“公开事实、泄漏和产品路线分层”任务。",
+      "新任务标记为手动任务，后续 Computer History 刷新不得删除。"
+    ]
+  },
+  "tasks": [
+    {
+      "id": 1001,
+      "title": "Dorsi Effort 与 Training Load 规则收束",
+      "goal": "让正式 Effort、Training Load 的来源边界和前台行为形成可验收的一致规则。",
+      "stage": "决策",
+      "source": "Computer History · Dorsi",
+      "closed": "已复核 accepted 规则的来源顺序、Apple-first 读取/写回、可信结束时间/有效时长，以及条件性最低 Effort 2；本小时未观察到实现代码、Issue、测试或外部交付闭合。",
+      "blocker": "HRR/MET→Effort 参数、心率覆盖/缺失、Apple 延迟与补偿同步、跨系统手动修改、历史重算及 Apple Fitness 设备验证尚未冻结为实现验收包",
+      "next": "用 15–30 分钟把 HRR/MET 映射、Apple 等待/补偿与跨系统修改判定收束成输入—条件—输出表",
+      "note": "当前最能解除下游阻塞",
+      "priority": 1,
+      "done": false,
+      "managedBy": "computer-history"
+    },
+    {
+      "id": 1002,
+      "title": "HealthKit 后台预同步问题跟进",
+      "goal": "确认后台预同步问题已经从发现进入可验证的处理链。",
+      "stage": "外部交付",
+      "source": "Computer History · GitHub / Dorsi",
+      "closed": "已形成问题记录并创建 HealthKit 后台预同步 GitHub issue #4110，进入外部协作。",
+      "blocker": "当前覆盖未见新的处理反馈或真实设备验证结果",
+      "next": "检查 issue #4110 的处理状态与可复现条件；没有反馈则明确记为等待",
+      "priority": null,
+      "done": false,
+      "managedBy": "computer-history"
+    },
+    {
+      "id": 1003,
+      "title": "运动科学日报审核收束",
+      "goal": "把仍在审核中的内容推进到明确通过、退回或暂停。",
+      "stage": "产物",
+      "source": "Computer History · sports-science-daily",
+      "closed": "已定位来源访问、分页、身份核验等缺口；审核包仍未完成外部发布读回。",
+      "blocker": "可修复采集缺口与真实外部边界尚未全部分层，外部发布未闭合",
+      "next": "为首条未决缺口补修复路径或边界结论，再确认审核包是否可发布",
+      "priority": null,
+      "done": false,
+      "managedBy": "computer-history"
+    },
+    {
+      "id": 1004,
+      "title": "VO₂max 排查协作回收",
+      "goal": "确认已交出的排查动作是否产生回复、验证或新的阻塞。",
+      "stage": "外部交付",
+      "source": "Computer History · 协作",
+      "closed": "已完成 VO₂max 未显示问题的诊断结论交接；当前覆盖未见新的验证回执。",
+      "blocker": "后续回执与设备侧验证在当前覆盖中不可确认",
+      "next": "核对一次回执；没有新增就保持等待，不重复投入",
+      "priority": null,
+      "done": false,
+      "managedBy": "computer-history"
+    },
+    {
+      "id": 1101,
+      "title": "解析训练侧重算法",
+      "goal": "把 Garmin Training Load Focus 的公开原理转成 Dorsi 可解释、可验证的刺激分解模型。",
+      "stage": "证据",
+      "source": "对话 · 解析训练侧重算法",
+      "closed": "已确认核心不是心率区间时长，而是 EPOC 剂量、有氧/无氧刺激、适应类型与约四周分布的分层链路。",
+      "blocker": "Garmin/Firstbeat 未公开最终拆分系数、阈值和个人目标区间算法",
+      "next": "用 30 分钟列出输入、实测量、派生量、隐变量和三类刺激的最小可解释公式",
+      "note": "直接影响 Dorsi 训练负荷产品逻辑",
+      "priority": 2,
+      "done": false,
+      "managedBy": "manual"
+    },
+    {
+      "id": 1102,
+      "title": "Phoenix 与轻量空间计算路线",
+      "goal": "判断 Phoenix、GravityXR、RayNeo iO、Even G2 与 XREAL AURA 分别代表什么技术路线，以及对产品开发的实际价值。",
+      "stage": "证据",
+      "source": "对话 · 介绍 Phoenix 产品",
+      "closed": "已区分百克级分体 MR 与 30–50 克全天 HUD：Phoenix 的核心是计算和电池外置，不等于普通显示眼镜。",
+      "blocker": "Phoenix 最终规格、SDK、正式亮相与发售时间仍缺少完整官方确认",
+      "next": "做一张已确认/泄漏分栏表，只比较形态、重量、显示、空间定位、SDK 与时间窗口",
+      "note": "先形成判断，不继续无边界浏览",
+      "priority": 3,
+      "done": false,
+      "managedBy": "manual"
+    }
+  ],
+  "progressReports": [
+    {
+      "id": "2026-08-25T17:00:00+08:00",
+      "generatedAt": "今天 17:00",
+      "window": "16:00–17:00",
+      "summary": "本小时集中复核 Dorsi Effort 规则的落地前状态：accepted 决策层仍清晰，但实现参数、同步边界、历史重算和 Apple Fitness 设备验证尚未闭合；同时查看了工作看板与提醒同步任务配置，未观察到本小时实际交付执行。",
+      "progress": [
+        "复核 Dorsi Effort 的来源顺序、Apple-first 读取/写回、可信结束时间与有效训练时长，以及条件性最低 Effort 2。",
+        "把未闭合项收束为 HRR/MET→Effort、心率覆盖/缺失、Apple 延迟与后台补偿、跨系统手动修改、历史重算和 Apple Fitness 设备验证。",
+        "查看小时工作看板与提醒事项同步任务的配置；Computer History 未观察到本小时实际写板、构建或发布。"
+      ],
+      "closed": [
+        "已确认可见决策文档仍为 accepted，通用正时长 Effort 2 兜底仍被排除，来源顺序和 Apple-first 估算边界保持一致。",
+        "未确认本小时新增代码、Issue、测试或外部交付闭合。"
+      ],
+      "blocked": [
+        "Dorsi 实现验收包仍未冻结：计算参数、数据覆盖与缺失处理、跨系统同步/用户修改、历史重算及 Apple Fitness 真实设备行为均未完成。",
+        "本窗口部分非工作沟通内容不可可靠观察，不纳入工作结论；因此该部分存在覆盖缺口。"
+      ]
+    },
+    {
+      "id": "2026-08-25T16:00:00+08:00",
+      "generatedAt": "今天 16:00",
+      "window": "15:00–16:00",
+      "summary": "本小时从 Dorsi Effort 规则复核延伸到交付闭环：确认方案仍有旧容量规则与基线问题；同时把工作看板修正为站点持续更新、完成项不回流，并保留外部发布未闭合边界。",
+      "progress": [
+        "复核 Dorsi Effort 2 条件性最低值、canonical Effort 顺序与自动停止/HRR/MET 未决项。",
+        "检查方案与旧容量规则的冲突，以及 develop 基线是否仍是最新可用基线。",
+        "确认工作看板站点、三张优先卡、完成不回流和每小时进度报告的行为。"
+      ],
+      "closed": [
+        "通用正时长 Effort 2 兜底继续排除在正式规则外；仅保留确认结构化训练下的条件性最低值。",
+        "看板交付边界冻结为公开站点与苹果提醒事项；同步按任务 ID 去重并继承完成状态。"
+      ],
+      "blocked": [
+        "Dorsi 方案仍需处理旧容量规则冲突、更新 develop 基线，并冻结自动停止/HRR/MET 的验收口径。",
+        "运动科学审核包的外部发布与覆盖读回仍未完成。"
+      ]
+    }
+  ],
+  "insight": {
+    "summary": "16:00–17:00 的可确认主线是 Dorsi Effort 从 accepted 决策复核走向实现参数收束；工作看板与提醒同步任务被查看，但本小时未观察到实际写板、构建或发布。",
+    "changes": [
+      "Dorsi Effort 的来源顺序、Apple-first 读取/写回、可信有效时长和条件性最低 Effort 2 被再次复核；实现参数仍未闭合。",
+      "HRR/MET 映射、心率覆盖、Apple 延迟与后台补偿、跨系统手动修改、历史重算和 Apple Fitness 设备验证被收束为同一实现阻塞包。",
+      "工作看板与提醒同步任务的配置界面被查看，但 Computer History 未观察到本小时实际同步或站点发布。"
+    ],
+    "outputs": [
+      "形成 16:00–17:00 小时进度报告，明确 Dorsi 落地前阻塞和本窗口覆盖缺口。",
+      "保持手动任务与未被本小时活动改变的观察任务原值，未凭应用切换新增工作事实。",
+      "未确认本小时新增代码、Issue、测试或外部交付产物。"
+    ],
+    "people": [
+      "公开版不展示联系人姓名、私人沟通记录或消息内容。"
+    ]
+  }
+}
