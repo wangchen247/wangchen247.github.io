@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-25 18:45（北京时间）",
-  "coverage": "Computer History · 北京时间 2026-08-25 17:00–18:00",
+  "updatedAt": "2026-08-25 19:01（北京时间）",
+  "coverage": "Computer History · 北京时间 2026-08-25 18:00–19:00（18:58–19:00 无可用事件）",
   "delivery": {
     "updatedAt": "今天 15:40",
     "title": "新增两项技术理解任务",
@@ -16,27 +16,27 @@
     {
       "id": 1001,
       "title": "Dorsi Effort 与 Training Load 规则收束",
-      "goal": "让正式 Effort、Training Load 的来源边界和前台行为形成可验收的一致规则。",
+      "goal": "把 Dorsi Effort 与 Training Load 规则从 accepted 文档收束成可执行的实现验收包。",
       "stage": "产物",
       "source": "Computer History · Dorsi",
-      "closed": "已把历史重算、当前抗阻训练范围内的 MET 适用边界，以及 HRR Effort 与 TRIMP 共用清洗后 30 秒心率窗口、Effort 按有效窗口时长加权聚合等已确认点反映到 accepted 决策文档；本小时未观察到代码、Issue、测试、提交或外部交付闭合。",
-      "blocker": "MET→相对强度→Effort 的可执行公式与缺失能力数据降级、心率覆盖/缺失、加权结果舍入、Apple 延迟与补偿同步、跨系统手动修改、历史重算及 Apple Fitness 设备验证尚未冻结为实现验收包",
+      "closed": "已把 Dorsi Effort 长提案压缩为约 97 行的 implementation-facing 变更清单，并移除未确认的心率覆盖阈值、Physical Effort 覆盖率、体重回看期和 Active Energy 假设；本小时未观察到代码、测试或提交闭合。",
+      "blocker": "MET→相对强度→Effort 的可执行公式与缺失能力数据降级、心率数据覆盖/缺失、舍入、Apple 延迟与补偿同步、跨系统手动修改、历史重算及真实设备验证尚未冻结为实现验收包",
       "next": "用 15–30 分钟把 MET→相对强度→Effort 的变量、单位、能力数据优先级、失败降级和舍入规则写入文档并核对一个数值例子；无法写成可执行式则明确失败",
       "note": "当前最能解除下游阻塞",
-      "priority": 3,
+      "priority": 2,
       "done": false,
       "managedBy": "computer-history"
     },
     {
       "id": 1002,
       "title": "HealthKit 后台预同步问题跟进",
-      "goal": "确认后台预同步问题已经从发现进入可验证的处理链。",
+      "goal": "确认手动清除 Dorsi 后的新骑行能进入 Training Load、下一次睡眠能进入 Recovery，并把结果收束为可验收的处理链。",
       "stage": "外部交付",
       "source": "Computer History · GitHub / Dorsi",
-      "closed": "已形成问题记录并创建 HealthKit 后台预同步 GitHub issue #4110，进入外部协作。",
-      "blocker": "当前覆盖未见新的处理反馈或真实设备验证结果",
-      "next": "检查 issue #4110 的处理状态与可复现条件；没有反馈则明确记为等待",
-      "priority": null,
+      "closed": "已创建 HealthKit 后台预同步 GitHub issue #4110；本小时识别出标题已改但正文仍残留排除手动清除的冲突，并收束出两条结果型验收：骑行后 Training Load 刷新、睡眠后 Recovery 刷新；未确认整篇正文已最终读回。",
+      "blocker": "Issue #4110 完整正文的一致性读回与真实设备验证结果尚未确认",
+      "next": "用 15–30 分钟读回 issue #4110 完整正文，确认两条场景、同条件对照及数据日期/计算刷新证据；失败则只记录具体冲突",
+      "priority": 1,
       "done": false,
       "managedBy": "computer-history"
     },
@@ -62,6 +62,19 @@
       "closed": "已完成 VO₂max 未显示问题的诊断结论交接；当前覆盖未见新的验证回执。",
       "blocker": "后续回执与设备侧验证在当前覆盖中不可确认",
       "next": "核对一次回执；没有新增就保持等待，不重复投入",
+      "priority": null,
+      "done": false,
+      "managedBy": "computer-history"
+    },
+    {
+      "id": 1005,
+      "title": "公开工作看板访问路径核查",
+      "goal": "让公开工作看板保持可访问，并明确当前网络下公开发布路径的可用性边界。",
+      "stage": "外部交付",
+      "source": "Computer History · 工作看板访问",
+      "closed": "已观察到 GitHub Pages 备用看板能够加载；GPT Sites 路径在当前网络被 Cloudflare 阻断，未观察到本小时修复闭合。",
+      "blocker": "当前网络下 GPT Sites 路径的阻断原因与可恢复性仍未确认，公开看板路径需要保持单一可读出口",
+      "next": "用 15–30 分钟直接核对 GitHub Pages 首页与 JSON 的 200 响应；若 GPT Sites 仍阻断则只记录为访问边界",
       "priority": null,
       "done": false,
       "managedBy": "computer-history"
@@ -100,7 +113,7 @@
       "goal": "把肌氧与 TrainingPeaks 相关研究整理成可验证的证据与产品价值判断。",
       "stage": "证据",
       "source": "用户明确加入",
-      "closed": "未确认：本项研究尚未开始。",
+      "closed": "已明确本项研究跟进主题为肌氧与 TrainingPeaks；未观察到首批来源、综述或产品价值判断完成。",
       "blocker": "研究问题、对象/设备/数据边界和首批来源尚未收束",
       "next": "用 15–30 分钟列出肌氧与 TrainingPeaks 各自的研究问题、关键输入和首批来源；若范围过宽则收束为证据清单",
       "note": "新增手动研究任务，不由 Computer History 自动移除",
@@ -146,7 +159,7 @@
       "blocker": "Recovery 的算法、证据和产品边界尚未收束为验收表",
       "next": "用 15–30 分钟列出 Recovery 的输入、输出、阈值、证据和实现缺口，形成一页验收表；缺项明确失败",
       "note": "从苹果提醒事项「💼工作」导入；公开版已移除原始私有来源路径",
-      "priority": 1,
+      "priority": 3,
       "done": false,
       "managedBy": "manual"
     },
@@ -160,7 +173,7 @@
       "blocker": "睡眠数据字段、最短历史窗口、上下限定义和验证方法尚未收束",
       "next": "用 15–30 分钟列出睡眠数据字段、最短历史窗口、上下限估计方法和验证标准；无法定稿则列出缺口",
       "note": "从苹果提醒事项「💼工作」导入",
-      "priority": 2,
+      "priority": null,
       "done": false,
       "managedBy": "manual"
     },
@@ -180,6 +193,27 @@
     }
   ],
   "progressReports": [
+    {
+      "id": "2026-08-25T19:00:00+08:00",
+      "generatedAt": "今天 19:00",
+      "window": "18:00–19:00（18:58–19:00 未覆盖）",
+      "summary": "本小时把 Dorsi Effort 评审压缩为实现变更清单，并把 HealthKit 后台同步 issue #4110 从泛化机制讨论收束为两条结果型验收；Issue 正文最终一致性和真实设备验证仍未确认，窗口末 18:58–19:00 无可用事件。",
+      "progress": [
+        "把 Dorsi Effort 长提案压缩为约 97 行的 implementation-facing 变更清单，移除未确认的心率覆盖阈值、Physical Effort 覆盖率、体重回看期和 Active Energy 假设。",
+        "继续整理 HealthKit 后台同步 issue #4110：识别出标题已改但正文仍残留排除手动清除的冲突，并将验收收束为手动清除 Dorsi 后完成骑行时 Training Load 刷新、睡眠后 Recovery 刷新。",
+        "补充同条件对照和证据边界：关注新数据是否参与最新计算、数据日期是否刷新，不把系统是否唤醒 App 或数值必然变化当成唯一验收；同时提出肌氧与 TrainingPeaks 研究跟进，未观察到完整研究产出。",
+        "查看公开工作看板访问路径；观察到 GitHub Pages 备用页面可用，未观察到本小时完成工作板写入、代码、测试或外部发布。"
+      ],
+      "closed": [
+        "Dorsi Effort 已形成更短的实现变更清单，未确认参数已从可执行口径中移除。",
+        "#4110 已形成两条结果型验收场景和对应的正文重写方向；未确认外部 issue 的完整正文已最终读回。"
+      ],
+      "blocked": [
+        "#4110 完整正文的一致性读回与真实设备验证仍未确认；相同输入下数值可能不变，仍需用数据日期和参与最新计算的证据验收。",
+        "Dorsi Effort 实现验收包仍未冻结：MET→相对强度→Effort 公式、缺失能力数据降级、Apple 延迟与补偿同步、跨系统手动修改、历史重算及设备验证均未闭合。",
+        "Computer History 在 18:58–19:00 没有可用事件；该时段未观察到不等于没有工作。"
+      ]
+    },
     {
       "id": "2026-08-25T18:00:00+08:00",
       "generatedAt": "今天 18:00",
@@ -239,16 +273,16 @@
     }
   ],
   "insight": {
-    "summary": "17:00–18:00 的可确认主线是 Dorsi Effort 从已确认产品边界推进到 MET→相对强度→Estimated Effort 的实现公式收束；公式尚未确认写入，且 17:50–18:00 的摘要缺口已用原始事件流补查。",
+    "summary": "18:00–19:00 的可确认主线是 Dorsi Effort 从长提案收束为实现变更清单，以及 HealthKit 后台同步 issue #4110 从机制讨论收束为骑行后 Training Load、睡眠后 Recovery 两条结果型验收；外部正文最终读回、真实设备验证和 18:58–19:00 的 Computer History 覆盖仍未确认。",
     "changes": [
-      "已确认/反映到文档的当前抗阻范围、共享清洗后 30 秒心率窗口和时长加权聚合边界保持一致。",
-      "MET 到相对强度再到 Estimated Effort 的可执行公式、能力数据缺失降级、心率覆盖阈值和舍入规则被收束为首要实现阻塞包。",
-      "本小时未观察到代码、测试、Issue、提醒同步、站点写入或发布闭合；17:50–18:00 使用原始事件流，部分非工作沟通不可可靠归纳。"
+      "Dorsi Effort 文档已压缩为 implementation-facing 清单，未确认的心率覆盖阈值、Physical Effort 覆盖率、体重回看期和 Active Energy 假设被移除。",
+      "#4110 的验收重点转为用户可观察的数据刷新结果，并保留同条件对照、数据日期和参与最新计算的证据边界。",
+      "本小时未观察到代码、测试、提醒同步或站点发布闭合；18:58–19:00 无可用 Computer History 事件。"
     ],
     "outputs": [
-      "形成 17:00–18:00 小时进度报告，明确本小时推进、未闭合事项和原始事件流覆盖缺口。",
-      "保留用户手动任务的稳定 id、标题和归属，并仅按本小时可确认证据更新 Dorsi 观察任务。",
-      "未确认本小时新增代码、Issue、测试、提交或外部交付产物。"
+      "形成 18:00–19:00 小时进度报告，明确两条工作主线、未闭合事项和 18:58–19:00 覆盖缺口。",
+      "按当前可确认活动更新 #4110、Dorsi Effort 与公开看板访问任务，保留手动任务的稳定 id、标题和归属。",
+      "未确认本小时新增代码、测试、提交或外部 issue 最终读回产物。"
     ],
     "people": [
       "公开版不展示联系人姓名、私人沟通记录或消息内容。"
